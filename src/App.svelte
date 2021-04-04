@@ -1,18 +1,25 @@
 <script>
-  import Widget from './components/Widget.svelte';
-  // let comment = false;
+  let isRed = true;
 </script>
 
 <svelte:head>
   <title>Svelte + Sveasy + Windicss</title>
 </svelte:head>
 
-<div class="flex flex-col bg-indigo-900 min-w-100vw min-h-100vh p-5 test items-center justify-center">
-  <Widget />
+<button class="bg-red-500
+text-white p-5
+">
+Multiline
+</button>
+
+<div class:bg-red-500={isRed}>
+class directive
+</div>
+
+<div class={isRed ? 'bg-red-500': 'bg-green-400'}>
+  function
 </div>
 
 <style>
-  .test {
-    @apply bg-red-100;
-  }
+
 </style>
